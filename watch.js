@@ -59,7 +59,7 @@ var explosion = document.getElementById("explosion");
 toggle.onclick = () => {
     if (interval === null) {
         let attempt = parseInt(document.getElementById("attempt-select").selectedOptions[0].value)
-        calculator = new ScoreCalculator(attempt, 210, 145);
+        calculator = new ScoreCalculator(attempt, 210);
         interval = setInterval(() => updateCalculator(calculator), 1000);
         toggle.textContent = "Stop"
     } else {
