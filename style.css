@@ -6,7 +6,7 @@ body {
     max-height: 100vh;
 }
 
-#scoreText {
+.scoreText {
     font-size: 25vh;
     flex: 1 1 0;
 }
