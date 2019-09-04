@@ -3,6 +3,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-height: 100vh;
 }
 
@@ -17,12 +18,33 @@ body {
 
 #controls {
     flex: 1 1 0;
+    margin: 15px;
+    display: flex;
+    align-items: center;
 }
 
 #attempt-selector {
     flex: 1 1 0;
 }
 
+button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    margin: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#toggle {
+    background-color: rgb(51, 204, 255);
+}
+
+#explosion {
+    background-color: rgba(220, 0, 0, 1);
+}
 
 .reward-eligible {
     color: green;
