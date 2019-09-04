@@ -1,15 +1,28 @@
 body {
     font-family: sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
 }
 
 #scoreText {
-    font-size: 12em;
+    font-size: 25vh;
+    flex: 1 1 0;
 }
 
 #time {
-    font-size: 2em;
+    flex: 1 1 0;
 }
+
+#controls {
+    flex: 1 1 0;
+}
+
+#attempt-selector {
+    flex: 1 1 0;
+}
+
 
 .reward-eligible {
     color: green;

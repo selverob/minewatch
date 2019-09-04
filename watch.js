@@ -1,5 +1,7 @@
 "use strict"
 
+const explosionPenalty = 10;
+
 class ScoreCalculator {
     constructor(attemptNo, gameTime = 180, initialTime = 0) {
         this.time = initialTime;
@@ -24,11 +26,12 @@ class ScoreCalculator {
     }
 
     score() {
+        let explosionPenalties = this.explosions * explosionPenalty;
         if (this.time <= this.initialDelay) {
-            return 100;
+            return 100 - explosionPenalties;
         }
         let coefficient = (this.gameTime - (this.time - this.initialDelay)) / this.gameTime;
-        let score = Math.round(100 * coefficient - 15*this.explosions);
+        let score = Math.round(100 * coefficient - explosionPenalties);
         return Math.max(0, score);
     }
 }
