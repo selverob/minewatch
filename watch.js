@@ -69,8 +69,6 @@ toggle.onclick = () => {
         clearInterval(interval);
         interval = null;
         calculator = null;
-        document.querySelector("#scoreText").textContent = "0";
-        document.querySelector("#time").textContent = "00:00";
         toggle.textContent = "Start"
     }
 }
