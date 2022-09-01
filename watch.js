@@ -2,12 +2,13 @@
 
 // Attempt 1 - 2.5 minutes with 100 points, then 3.5 minutes with lowering points = 6 minutes
 //             Explosion penalty is 10 points
-//             Reward if they have at least 65 points
+//             Reward if they have at least 50 points
 // Attempt 2 - 3.5 minutes with 100 points, then 3.5 minutes with lowering points = 7 minutes
 //             Explosion penalty is 10 points
 //             Reward if they have at least 50 points
 
 const explosionPenalty = 10;
+const attemptTresholds = [50, 50]
 
 class ScoreCalculator {
     constructor(attemptNo, gameTime = 180, initialTime = 0) {
@@ -29,8 +30,7 @@ class ScoreCalculator {
     }
 
     isEligibleForReward() {
-        let treshold = this.attemptNo == 1 ? 65 : 50;
-        return this.score() > treshold;
+        return this.score() >= attemptTresholds[this.attemptNo - 1];
     }
 
     score() {
